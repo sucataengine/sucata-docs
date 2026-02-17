@@ -25,6 +25,6 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material
-      - run: echo "sucata.dev" > .domains
+      - run: echo "sucata.dev" > docs/.domains
       - run: echo "www.sucata.dev" > docs/CNAME
       - run: mkdocs gh-deploy --force --remote-branch pages
