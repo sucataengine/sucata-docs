@@ -25,6 +25,16 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material
-      - run: echo "sucata.dev" > docs/.domains
       - run: echo "www.sucata.dev" > docs/CNAME
       - run: mkdocs gh-deploy --force --remote-branch pages
+      - run: |
+          git fetch origin pages
+          git checkout pages
+
+          echo "www.sucata.dev" > .domains
+          echo "sucata.dev" >> .domains
+          echo "docs.sucata.codeberg.page" >> .domains
+
+          git add .domains
+          git commit -m "Add .domains file"
+          git push origin pages
