@@ -45,7 +45,7 @@ curl -fsSL https://raw.githubusercontent.com/gumpdev/sucata/refs/heads/main/inst
 If you prefer to build sucata manually:
 
 1. You need to install: Odin and C++ compiler (MSVC, Clang, or GCC)
-2. [Clone the repository](https://github.com/gumpdev/sucata)
+2. [Clone the repository](https://codeberg.org/sucata/sucata)
 3. Go to the folder /sokol/ and
    [build the sokol binaries](https://github.com/floooh/sokol-odin/tree/main?tab=readme-ov-file#build)
 4. You go to the repository root, then build the sucata binaries using:

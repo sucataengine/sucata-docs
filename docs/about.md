@@ -9,6 +9,6 @@ It designed using OOP on Lua, so works very well with
 
 ## Contributors
 
-- [Gustavo Maia Paes (gump)](https://github.com/gumpdev) - Creator
+- [Gustavo Maia Paes (gump)](https://codeberg.org/gumpdev) - Creator
 - [Ellora](https://github.com/elloramir) - Help with Computer Graphics
 - [Murilo M. Grosso (ThornDuck)](https://github.com/MuriloMGrosso) - Testing
