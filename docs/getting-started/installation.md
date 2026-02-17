@@ -14,7 +14,7 @@ dependencies.
 2. Run the following command:
 
 ```powershell
-irm https://raw.githubusercontent.com/gumpdev/sucata/refs/heads/main/install_windows.ps1 | iex
+irm https://codeberg.org/sucata/sucata/raw/branch/main/install_windows.ps1 | iex
 ```
 
 3. Restart your terminal.
@@ -30,7 +30,7 @@ irm https://raw.githubusercontent.com/gumpdev/sucata/refs/heads/main/install_win
 2. Run the following command:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/gumpdev/sucata/refs/heads/main/install_unix.sh | sh
+curl -fsSL https://codeberg.org/sucata/sucata/raw/branch/main/install_unix.sh | sh
 ```
 
 3. Restart your terminal.
