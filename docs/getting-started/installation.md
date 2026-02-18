@@ -30,7 +30,7 @@ irm https://codeberg.org/sucata/sucata/raw/branch/main/install_windows.ps1 | iex
 2. Run the following command:
 
 ```bash
-curl -fsSL https://codeberg.org/sucata/sucata/raw/branch/main/install_unix.sh | sh
+curl -fsSL https://codeberg.org/sucata/sucata/raw/branch/main/install_unix.sh | bash
 ```
 
 3. Restart your terminal.
