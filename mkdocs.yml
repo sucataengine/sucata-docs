@@ -27,6 +27,7 @@ theme:
 
 plugins:
   - search
+  - blog
 
 repo_url: https://codeberg.org/sucata/sucata
 repo_name: gumpdev/sucata

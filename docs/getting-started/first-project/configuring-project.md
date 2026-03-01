@@ -15,15 +15,6 @@ sucata version
 Then you can create a new folder for the project, and inside that folder, create
 a new file called `main.lua`, this will be the main entry point of the game.
 
-## Using Classic
-
-Is highly recommended to use [classic](https://github.com/rxi/classic) library
-to create classes for your entities, but it's not mandatory, you can create your
-entities using plain tables if you prefer.
-
-To use the classic library, you need to download the `classic.lua` file from the
-repository and place it in your project folder
-
 ## Configuration
 
 To configure the project, you need to call functions from `sucata.window` to

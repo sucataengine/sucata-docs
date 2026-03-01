@@ -4,37 +4,42 @@ The scene module of the Sucata.
 
 ---
 
+## Behaviour
+
+Represents an script that changes the entity state
+
+**fields**
+
+- tick? `function(state)`  
+  The tick function called every frame.  
+  Receives `state` as parameter.
+
+- draw? `function(state)`  
+  The draw function called every frame.  
+  Receives `state` as parameter.
+
+- free? `function(state)`  
+  The function called when the entity is destroyed.  
+  Receives `state` as parameter.
+
+- init? `function(state)`  
+  The function called when the entity is spawned.  
+  Receives `state` as parameter.
+
+---
 ## Entity
 
 Represents a game object in the scene.
 
-An `Entity` can contain lifecycle functions and any custom properties defined by the user.
+An `Entity` can contain state and behaviours
 
 **fields**
 
-- id? `string`  
-  The unique identifier of the entity.  
-  It will have a value when the entity is spawned.
+- state `table`  
+  The unique state of the entity
 
-- update? `function(self)`  
-  The update function called every frame.  
-  Receives `self` as parameter.
-
-- draw? `function(self)`  
-  The draw function called every frame.  
-  Receives `self` as parameter.
-
-- free? `function(self)`  
-  The function called when the entity is destroyed.  
-  Receives `self` as parameter.
-
-- init? `function(self)`  
-  The function called when the entity is spawned.  
-  Receives `self` as parameter.
-
-- [string] `any`  
-  Custom properties.  
-  You can add any additional fields you want to the entity.
+- behaviours? `Behaviour[]`  
+  The list of behaviours that entity will execute
 
 ---
 
