@@ -28,8 +28,8 @@ theme:
 plugins:
   - search
 
-repo_url: https://github.com/gumpdev/sucata
-repo_name: gumpdev/sucata
+repo_url: https://codeberg.org/sucata/sucata
+repo_name: sucata/sucata
 
 nav:
   - Home: index.md
