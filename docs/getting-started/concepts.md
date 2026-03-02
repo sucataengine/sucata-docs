@@ -76,8 +76,6 @@ the scene.
 > This function is optional, and you can omit it if you don't need to execute
 > any command before the entity is removed from the scene.
 
-
-
 ## Rendering
 
 ### Render functions
@@ -124,3 +122,13 @@ local bullet_entity = sucata.scene.find_by_id(self.children)
 bullet_entity.x = self.x
 bullet_entity.y = self.y
 ```
+
+## Building
+
+To build your game in sucata you can run `sucata build .` and build the game for the operational system you are using
+
+> For now, while has a limitation that you can't cross build, but we plan to make cross build in the future
+
+### How build works?
+
+In the sucata files, we have the `sucata` and `sucata-player`, `sucata` is the cli helper, that has all commands, and `sucata-player` is the executable that interprets the code and run, when you build the game, sucata copys the `sucata-player`, all DLLs and bundle all assets that you used in your source code into the `assets.scta`, after all that, sucata signs the copied `sucata-player`, to only run with the specified `assets.scta`, when you open the executable, will load the `assets.scta` and runs the game.
