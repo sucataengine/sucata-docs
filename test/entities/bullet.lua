@@ -2,10 +2,7 @@ local function bullet(x,y)
 	return {
 		state = {
 			x = x,
-			y = y,
-			texture = "src://sprites/bullet.png",
-			width = 16,
-			height = 16
+			y = y
 		},
 		behaviours = {
 			Behaviours.Bullet, -- Call the bullet behaviour
