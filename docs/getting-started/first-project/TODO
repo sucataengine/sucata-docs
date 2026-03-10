@@ -1,7 +1,10 @@
 - Adding textures and animations
 	- Player
+
+- Adding Sounds
+	- Player hit
+	- Meteor destroy
 	- Bullet
-	- Meteor
 
 - Game over
 	- Create screen

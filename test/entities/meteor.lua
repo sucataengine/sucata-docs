@@ -1,7 +1,9 @@
 local function meteor()
 	return {
 		state = {
-			y = -16 -- Start y of the meteor is offscreen
+			y = -16, -- Start y of the meteor is offscreen
+			texture = "src://sprites/meteor.png",
+			atlas_size = 8,
 		},
 		behaviours = {
 			Behaviours.RandomStartPosition, -- Call the random spawn position

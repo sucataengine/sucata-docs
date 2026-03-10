@@ -10,5 +10,7 @@ return {
 			sucata.events.emit("meteor_reached", state) -- Emit an event that meteor reached
 			sucata.scene.destroy(state) -- Destroy the meteor
 		end
+		
+ 		state.atlas_x = state.health - 1
 	end
 }
