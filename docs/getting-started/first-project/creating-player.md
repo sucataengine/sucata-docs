@@ -58,7 +58,7 @@ Behaviours = require("behaviours")
 
 ---
 
-# Creating the Player Entity
+## Creating the Player Entity
 
 Now we will create the player entity.
 
@@ -95,7 +95,7 @@ The game should now look like this:
 
 ---
 
-# Creating the Player Behaviour
+## Creating the Player Behaviour
 
 Next, we will add player movement using the keyboard.
 
@@ -159,7 +159,7 @@ Now the player can move:
 
 ---
 
-# Adding Screen Boundaries
+## Adding Screen Boundaries
 
 To finish the initial player implementation, we will prevent the player from leaving the screen.
 

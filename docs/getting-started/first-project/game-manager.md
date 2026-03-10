@@ -8,7 +8,7 @@ Now we will create a **Game Manager**, responsible for managing core game system
 
 ---
 
-# Meteor Spawner
+## Meteor Spawner
 
 First, we will create a system that spawns a new meteor every **5 seconds**.
 
@@ -44,7 +44,7 @@ return {
 
 ---
 
-# Game Manager Entity
+## Game Manager Entity
 
 Now we will create the **Game Manager entity**.
 
@@ -69,7 +69,7 @@ sucata.scene.spawn(game_manager)
 
 ---
 
-# Player health
+## Player health
 
 Now we will implement the player's health system.
 
@@ -136,7 +136,7 @@ return {
 
 ---
 
-# Player Points
+## Player Points
 
 Next, we will implement the player scoring system.
 
@@ -196,7 +196,7 @@ return {
 
 ---
 
-# Drawing the UI
+## Drawing the UI
 
 Finally, we will draw the player UI on the screen.
 

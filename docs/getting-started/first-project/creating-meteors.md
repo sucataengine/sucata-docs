@@ -55,7 +55,7 @@ return {
 
 ---
 
-# Creating the Meteor Entity
+## Creating the Meteor Entity
 
 Now we will create the meteor entity.
 
@@ -94,7 +94,7 @@ The game should now look like this:
 
 ---
 
-# Creating a Random Start Position Behaviour
+## Creating a Random Start Position Behaviour
 
 Now we will create a behaviour that spawns entities at a **random position**.
 
@@ -120,7 +120,7 @@ return {
 
 ---
 
-# Spawning Meteors at Random Positions
+## Spawning Meteors at Random Positions
 
 Now we will update the meteor entity so it spawns at a random X position.
 

@@ -5,7 +5,7 @@ In this section we will create bullets and implement the logic required to destr
 
 ---
 
-# Creating the Bullet Behaviour
+## Creating the Bullet Behaviour
 
 First, create the bullet behaviour in `behaviours/bullet.lua`:
 
@@ -69,7 +69,7 @@ return {
 
 ---
 
-# Creating the Bullet Entity
+## Creating the Bullet Entity
 
 Now create the bullet entity in `entities/bullet.lua`:
 
@@ -94,7 +94,7 @@ return bullet
 
 ---
 
-# Creating the Shooter Behaviour
+## Creating the Shooter Behaviour
 
 Now we will allow the player to shoot bullets.
 
@@ -123,7 +123,7 @@ return {
 
 ---
 
-# Adding the Shooter to the Player
+## Adding the Shooter to the Player
 
 Now add the shooter behaviour to the player entity in `entities/player.lua`:
 
