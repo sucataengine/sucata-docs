@@ -40,7 +40,10 @@ nav:
       - First Project:
           - Overview: getting-started/first-project/overview.md
           - Configuring the Project: getting-started/first-project/configuring-project.md
-          - Creating a Player: getting-started/first-project/creating-player.md
+          - Creating the Player: getting-started/first-project/creating-player.md
+          - Creating Meteors: getting-started/first-project/creating-meteors.md
+          - Game Manager: getting-started/first-project/game-manager.md
+          - Shooting meteors: getting-started/first-project/shooting-meteors.md
   - Examples: examples.md
   - CLI: cli.md
   - References:
