@@ -3,6 +3,7 @@ return {
 	Bullet = require("behaviours.bullet"),
 	DrawPlayerUi = require("behaviours.draw_player_ui"),
 	DrawSprite = require("behaviours.draw_sprite"),
+	Inclination = require("behaviours.inclination"),
 	Player = require("behaviours.player"),
 	Meteor = require("behaviours.meteor"),
 	MeteorSpawner = require("behaviours.meteor_spawner"),

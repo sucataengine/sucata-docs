@@ -1,54 +1,68 @@
-# Adding textures
+# Adding Textures
 
- In this section we will add textures into our game, will add texture to the player, meteor and the bullet
+In this section we will add **textures** to our game.  
+We will add textures for the **player**, **meteors**, and **bullets**.
 
- You can used the assets we are using downloading from [here](https://codeberg.org/sucata/meteors-sucata/src/branch/main/sprites) 
+You can download the assets used in this tutorial from  
+[here](https://codeberg.org/sucata/meteors-sucata/src/branch/main/sprites).
 
- ## Bullet texture
+---
 
- Let's add the simplest texture, that is the bullet, so let's just update de state in `entities/bullet.lua`:
+## Bullet Texture
 
- ```lua
-local function bullet(x,y)
+Let's start with the simplest texture: the **bullet**.
+
+Update the state in `entities/bullet.lua`:
+
+```lua
+local function bullet(x, y)
 	return {
 		state = {
 			x = x,
 			y = y,
-			texture = "src://sprites/bullet.png", -- Add the path for the texture
-			width = 16, -- Add the width of the bullet
-			height = 16 -- add the height of the bullet
+			texture = "src://sprites/bullet.png", -- Texture path
+			width = 16, -- Bullet width
+			height = 16 -- Bullet height
 		},
 		behaviours = {
-			Behaviours.Bullet, 
-			Behaviours.ApplyForces, 
-			Behaviours.DrawSprite, 
+			Behaviours.Bullet,
+			Behaviours.ApplyForces,
+			Behaviours.DrawSprite,
 		}
 	}
 end
 
- return bullet
+return bullet
 ```
 
- > the `src://` is the root of the project, so use it to every path you need to put in sucata
+> **Note**
+> `src://` represents the **root directory of the project**.
+> Use this prefix whenever referencing files inside the project.
 
- The DrawSprite behaviour have some behaviours that we expect, as render texture, so just we declare in the state will show already
+The `DrawSprite` behaviour automatically renders textures when the `texture`, `width`, and `height` fields are present in the entity state.
 
- ![](./images/bullet-texture.png)
+The result should look like this:
 
- ## Meteor texture
+![](./images/bullet-texture.png)
 
- in the meteor texture we have some tweaks, i want to meteor texture changes as the health of the meteor, first let declare the texture on the entity, in `entities/meteor.lua`:
+---
 
- ```lua
+## Meteor Texture
+
+The meteor texture uses a **texture atlas** so the meteor appearance changes based on its health.
+
+First, define the texture in the meteor entity (`entities/meteor.lua`):
+
+```lua
 local function meteor()
 	return {
 		state = {
 			y = -16,
-			texture = "src://sprites/meteor.png", -- Add the meteor texture path
-			atlas_size = 8, -- Atlas size will split the texture into many 8x8 textures
+			texture = "src://sprites/meteor.png", -- Meteor texture
+			atlas_size = 8 -- Split the texture into 8 horizontal frames
 		},
 		behaviours = {
-			Behaviours.RandomStartPosition, 
+			Behaviours.RandomStartPosition,
 			Behaviours.Meteor,
 			Behaviours.ApplyForces,
 			Behaviours.DrawSprite,
@@ -56,30 +70,113 @@ local function meteor()
 	}
 end
 
- return meteor
+return meteor
 ```
 
- then into the meteor behaviour lets set the atlas_x, that is the coordinate of the texture to use, in `behaviours/meteor.lua`:
+Now update the meteor behaviour in `behaviours/meteor.lua`:
 
- ```lua
+```lua
 return {
 	init = function(state)
-		sucata.scene.add_tag(state, "meteor") 
+		sucata.scene.add_tag(state, "meteor")
+
 		state.speed = state.speed or math.random(100, 200)
-		state.health = state.health or math.random(1, 5) 
+		state.health = state.health or math.random(1, 5)
 		state.force_y = state.speed
 	end,
-	tick = function (state)
+
+	tick = function(state)
 		if state.y > 540 then
 			sucata.events.emit("meteor_reached", state)
 			sucata.scene.destroy(state)
 		end
 
- 		state.atlas_x = state.health - 1 -- Sets the atlas_x in the state to be the health - 1
+		-- Select the texture frame based on meteor health
+		state.atlas_x = state.health - 1
 	end
 }
 ```
 
- Should be like this:
+Now the meteor sprite will change depending on its health:
 
- ![](./images/meteor-texture.gif)
+![](./images/meteor-texture.gif)
+
+---
+
+## Player Texture
+
+For the player we will add a **texture atlas** that represents the ship inclination.
+
+First create a new behaviour in `behaviours/inclination.lua`:
+
+```lua
+return {
+	init = function(state)
+		state.inclination = 2 -- Initial inclination frame
+	end,
+
+	tick = function(state)
+		local dt = sucata.time.get_delta()
+
+		if sucata.input.is_held("left", "a") then
+			state.inclination = sucata.math.clamp(
+				state.inclination - (15 * dt),
+				0,
+				4
+			)
+
+		elseif sucata.input.is_held("right", "d") then
+			state.inclination = sucata.math.clamp(
+				state.inclination + (15 * dt),
+				0,
+				4
+			)
+
+		else
+			state.inclination = sucata.math.lerp(
+				state.inclination,
+				2,
+				dt * 10
+			)
+		end
+
+		state.atlas_x = math.floor(state.inclination)
+	end
+}
+```
+
+Register the behaviour in `behaviours/init.lua`:
+
+```lua
+return {
+	...
+	Inclination = require("behaviours.inclination"),
+}
+```
+
+Now update the player entity in `entities/player.lua`:
+
+```lua
+local function player(x, y)
+	return {
+		state = {
+			x = x,
+			y = y,
+			texture = "src://sprites/ship.png", -- Player texture
+			atlas_size = 8 -- Split texture into 8 frames
+		},
+		behaviours = {
+			Behaviours.Player,
+			Behaviours.Inclination,
+			Behaviours.Shooter,
+			Behaviours.DrawSprite,
+		}
+	}
+end
+
+return player
+```
+
+Now the player ship will tilt depending on movement:
+
+![](./images/player-texture.gif)
