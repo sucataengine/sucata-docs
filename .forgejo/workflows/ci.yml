@@ -2,13 +2,12 @@ name: ci
 on:
   push:
     branches:
-      - master
       - main
 permissions:
   contents: write
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: codeberg-small
     steps:
       - uses: actions/checkout@v4
       - name: Configure Git Credentials
@@ -26,5 +25,15 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material
-      - run: echo "www.sucata.dev" > docs/CNAME
-      - run: mkdocs gh-deploy --force
+      - run: mkdocs gh-deploy --force --remote-branch pages
+      - run: |
+          git fetch origin pages
+          git checkout pages
+
+          echo "www.sucata.dev" > .domains
+          echo "sucata.dev" >> .domains
+          echo "docs.sucata.codeberg.page" >> .domains
+
+          git add .domains
+          git commit -m "Add .domains file"
+          git push origin pages

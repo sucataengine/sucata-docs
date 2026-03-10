@@ -1,0 +1,13 @@
+- Adding textures and animations
+	- Player
+
+- Adding Sounds
+	- Player hit
+	- Meteor destroy
+	- Bullet
+
+- Game over
+	- Create screen
+	- Spawn Screen
+	- Restart the game
+	- Close the game

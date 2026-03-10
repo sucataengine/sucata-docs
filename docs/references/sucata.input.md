@@ -28,12 +28,24 @@ Input key and button names.
 - `"down"`
 - `"left"`
 - `"right"`
+- `"tab"`
 
 ---
 
 ## sucata.input.get_mouse_position
 
 Gets the current mouse position.
+
+**return**
+
+- x `number` - The x coordinate of the mouse  
+- y `number` - The y coordinate of the mouse  
+
+---
+
+## sucata.input.get_relative_mouse_position
+
+Gets the current mouse position based on the camera position, rotation and zoom.
 
 **return**
 
@@ -111,8 +123,8 @@ Checks if the mouse is hovering over a specific area for an entity.
 
 **parameters**
 
-- entity `string | table` - The entity ID or entity table  
 - area `table`
+  - id `string` - Unique id, can be the entity id
   - x `number` - X position of the area  
   - y `number` - Y position of the area  
   - width `number` - Width of the area  

@@ -15,7 +15,7 @@
 </div>
 <div style="display:flex; justify-content: center; align-items: center; gap: 16px">
     <a href="/examples/"> Examples </a>
-    <a target="_blank" href="https://github.com/gumpdev/sucata"> Repository </a>
+    <a target="_blank" href="https://codeberg.org/sucata/sucata"> Repository </a>
 </div>
 
 ### Overview
@@ -23,9 +23,6 @@
 Sucata game engine is a 2D game engine made to be simple and easy to use, with a lot of features to make your game development experience better.
 
 The goal is to make a create game experience similar good and smooth using only Lua scripting language.
-
-It designed using OOP on Lua, so works very well with
-[classic](https://github.com/rxi/classic)
 
 ### Objective
 

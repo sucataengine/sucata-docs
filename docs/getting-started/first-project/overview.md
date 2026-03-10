@@ -1,9 +1,22 @@
 # First Project
 
-In this section, we will create the first simple project in the sucata engine.
+In this section, we will create our first simple project using the Sucata Engine.
 
-## Ideia
+## Idea
 
-The idea of this project is to create a asteroid like game, will have a player
-that can move and shoot bullets into asteroids, the player needs to destroy
-asteroids, and avoid the asteroids hit the ground.
+![](../../images/meteors.png)
+
+The goal of this project is to build a simple **Asteroids-style game**.
+
+The player will control a ship that can **move and shoot bullets** at incoming asteroids.  
+To survive, the player must **destroy the asteroids before they hit the ground**.
+
+This project will introduce some basic concepts of the engine, such as:
+
+- Creating entities
+- Adding behaviors
+- Handling movement
+- Spawning objects
+- Detecting collisions
+- Creating UI
+- Handling button clicks

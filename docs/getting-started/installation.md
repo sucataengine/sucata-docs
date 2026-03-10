@@ -14,7 +14,7 @@ dependencies.
 2. Run the following command:
 
 ```powershell
-irm https://raw.githubusercontent.com/gumpdev/sucata/refs/heads/main/install_windows.ps1 | iex
+irm https://codeberg.org/sucata/sucata/raw/branch/main/install_windows.ps1 | iex
 ```
 
 3. Restart your terminal.
@@ -30,7 +30,7 @@ irm https://raw.githubusercontent.com/gumpdev/sucata/refs/heads/main/install_win
 2. Run the following command:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/gumpdev/sucata/refs/heads/main/install_unix.sh | sh
+curl -fsSL https://codeberg.org/sucata/sucata/raw/branch/main/install_unix.sh | bash
 ```
 
 3. Restart your terminal.
@@ -45,7 +45,7 @@ curl -fsSL https://raw.githubusercontent.com/gumpdev/sucata/refs/heads/main/inst
 If you prefer to build sucata manually:
 
 1. You need to install: Odin and C++ compiler (MSVC, Clang, or GCC)
-2. [Clone the repository](https://github.com/gumpdev/sucata)
+2. [Clone the repository](https://codeberg.org/sucata/sucata)
 3. Go to the folder /sokol/ and
    [build the sokol binaries](https://github.com/floooh/sokol-odin/tree/main?tab=readme-ov-file#build)
 4. You go to the repository root, then build the sucata binaries using:
