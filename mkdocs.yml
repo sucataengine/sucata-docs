@@ -45,6 +45,7 @@ nav:
           - Game Manager: getting-started/first-project/game-manager.md
           - Shooting meteors: getting-started/first-project/shooting-meteors.md
           - Adding textures: getting-started/first-project/adding-textures.md
+          - Playing sounds: getting-started/first-project/playing-sounds.md
   - Examples: examples.md
   - CLI: cli.md
   - References:

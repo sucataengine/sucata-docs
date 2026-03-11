@@ -7,6 +7,7 @@ return {
 	Player = require("behaviours.player"),
 	Meteor = require("behaviours.meteor"),
 	MeteorSpawner = require("behaviours.meteor_spawner"),
+	Music = require("behaviours.music"),
 	PlayerHealth = require("behaviours.player_health"),
 	PlayerPoints = require("behaviours.player_points"),
 	RandomStartPosition = require("behaviours.random_start_position"),

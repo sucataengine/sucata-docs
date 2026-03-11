@@ -179,4 +179,4 @@ return player
 
 Now the player ship will tilt depending on movement:
 
-![](./images/player-texture.gif)
+![](./images/player-animation.gif)
