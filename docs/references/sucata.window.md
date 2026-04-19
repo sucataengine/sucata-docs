@@ -185,3 +185,27 @@ Gets the current window icon path.
 **return**
 
 - path `string` - The file path of the current window icon  
+
+---
+
+## sucata.window.set_cursor
+
+Sets the mouse cursor appearance.
+
+**parameters**
+
+- cursor_name `string` - The cursor style to use. Available values:
+  - `"default"`, `"arrow"`, `"ibeam"`, `"crosshair"`, `"pointing_hand"`
+  - `"resize_ew"`, `"resize_ns"`, `"resize_nwse"`, `"resize_nesw"`, `"resize_all"`
+  - `"not_allowed"`
+  - `"custom_0"` through `"custom_15"`
+
+---
+
+## sucata.window.get_cursor
+
+Gets the current mouse cursor name.
+
+**return**
+
+- cursor_name `string` - The name of the current cursor style  

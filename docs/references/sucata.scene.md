@@ -195,3 +195,52 @@ Gets all entity IDs with a specific tag.
 ## sucata.scene.clear_entities
 
 Clears all entities from the scene.
+
+---
+
+## sucata.scene.init
+
+Registers a callback to run when the scene starts. If the scene has already started, the callback is called immediately.
+
+**parameters**
+
+- callback `function` - The function to call when the scene starts  
+
+---
+
+## sucata.scene.load_global
+
+Stores an entity globally so it persists across scene loads.
+
+**parameters**
+
+- key `string` - The key to store the entity under  
+- entity `Entity` - The entity to store  
+
+**return**
+
+- entity_id `number` - The ID of the spawned global entity  
+
+---
+
+## sucata.scene.get_global
+
+Retrieves a globally stored entity by key.
+
+**parameters**
+
+- key `string` - The key the entity was stored under  
+
+**return**
+
+- entity `Entity | nil` - The global entity state, or `nil` if not found  
+
+---
+
+## sucata.scene.unload_global
+
+Removes a globally stored entity by key.
+
+**parameters**
+
+- key `string` - The key of the global entity to remove  

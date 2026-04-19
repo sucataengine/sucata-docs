@@ -20,6 +20,7 @@ Properties used to draw a rectangle.
 - scale_x? `number` - Scale factor on X axis (default: 1.0)  
 - scale_y? `number` - Scale factor on Y axis (default: 1.0)  
 - fixed? `boolean` - Whether the rectangle is fixed to the screen (default: false)  
+- tiled? `boolean` - Whether the texture should be tiled (default: false)  
 - origin? `number` - Uniform origin point (default: 0.0)  
 - origin_x? `number` - Origin point on X axis (default: 0.0)  
 - origin_y? `number` - Origin point on Y axis (default: 0.0)  
@@ -32,7 +33,7 @@ Properties used to draw a rectangle.
 - atlas_margin? `number` - Margin around the frames in the texture atlas (default: 0.0)  
 - atlas_x? `number` - X index of the frame in the texture atlas (default: 0.0)  
 - atlas_y? `number` - Y index of the frame in the texture atlas (default: 0.0)  
-- shader? `string` - ID of the shader to use (default: "")  
+- shader? `number` - ID of the shader to use, returned by `load_shader` (default: 0)  
 - shader_args? `table` - Arguments for shader rendering (default: {})  
 
 ---
@@ -60,7 +61,7 @@ Properties used to draw text.
 - opacity? `number` - Opacity value from 0.0 to 1.0 (default: 1.0)  
 - align? `string` - Text alignment: `"left"`, `"center"`, or `"right"` (default: `"left"`)  
 - max_width? `number` - Maximum width of the text (default: 0.0)  
-- shader? `string` - ID of the shader to use (default: "")  
+- shader? `number` - ID of the shader to use, returned by `load_shader` (default: 0)  
 - shader_args? `table` - Arguments for shader rendering (default: {})  
 
 ---
@@ -102,8 +103,39 @@ Loads a Sucata shader.
 **parameters**
 
 - path `string` - File path to the Sucata shader  
-- name? `string` - Optional shader name  
 
 **return**
 
-- shader_name `string` - The name of the shader  
+- shader_id `number | nil` - The ID of the loaded shader, or `nil` if loading failed  
+
+---
+
+## sucata.graphic.add_post_processing
+
+Adds a post-processing effect using a loaded shader.
+
+**parameters**
+
+- shader_id `number` - The shader ID returned by `load_shader`  
+
+---
+
+## sucata.graphic.set_post_processing_args
+
+Sets a parameter on an active post-processing shader.
+
+**parameters**
+
+- shader_id `number` - The shader ID of the post-processing effect  
+- field `string` - The name of the shader argument to set  
+- value `number | table` - The value to set (`number` for float, `table` of 2/3/4 numbers for vec2/vec3/vec4)  
+
+---
+
+## sucata.graphic.remove_post_processing
+
+Removes an active post-processing effect.
+
+**parameters**
+
+- shader_id `number` - The shader ID of the post-processing effect to remove  

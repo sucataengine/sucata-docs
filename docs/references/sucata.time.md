@@ -55,7 +55,7 @@ Creates a timer with a callback function.
 
 **return**
 
-- timer_id `string` - The ID of the created timer  
+- timer_id `number` - The ID of the created timer  
 
 ---
 
@@ -65,7 +65,7 @@ Pauses a timer.
 
 **parameters**
 
-- timer_id `string` - The ID of the timer to pause  
+- timer_id `number` - The ID of the timer to pause  
 
 ---
 
@@ -75,7 +75,7 @@ Stops a timer.
 
 **parameters**
 
-- timer_id `string` - The ID of the timer to stop  
+- timer_id `number` - The ID of the timer to stop  
 
 ---
 
