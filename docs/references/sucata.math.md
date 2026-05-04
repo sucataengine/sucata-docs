@@ -110,13 +110,15 @@ Converts screen-relative coordinates to pixel coordinates.
 
 ## sucata.math.smooth_index
 
-Converts time into integer steps based on an interval.
+Converts time into integer steps based on an interval, wrapping the result so the
+index loops between `0` and `max_index`. Useful for stepping through animation
+frames at a fixed rate.
 
 **parameters**
 
 - current_time `number` - The current time (accumulated delta time)  
 - interval `number` - The interval time in seconds  
-- max_time? `number` - The maximum time to cap the result (optional)  
+- max_index `number` - The maximum index — the result wraps around when it exceeds this value  
 
 **return**
 

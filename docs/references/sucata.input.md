@@ -119,19 +119,22 @@ Checks if any of the given keys or buttons were released this frame.
 
 ## sucata.input.is_hover
 
-Checks if the mouse is hovering over a specific area for an entity.
+Registers an area as hoverable for the current frame and returns whether the mouse
+is currently over it. When multiple registered areas overlap, only the one with the
+highest `z_index` reports `true`, so call this every frame for each interactive
+region you want the mouse to reach (e.g. inside a `draw` behaviour).
 
 **parameters**
 
 - area `table`
-  - id `string` - Unique id, can be the entity id
+  - id `string` - Unique id, can be the entity id  
   - x `number` - X position of the area  
   - y `number` - Y position of the area  
   - width `number` - Width of the area  
   - height `number` - Height of the area  
-  - z_index? `number` - Z-index for layering (optional)  
+  - z_index? `number` - Z-index used to break ties between overlapping areas (optional)  
   - fixed? `boolean` - Whether the area is fixed to the screen (optional)  
 
 **return**
 
-- hovering `boolean` - Whether the mouse is hovering over the specified area  
+- hovering `boolean` - Whether the mouse is hovering over this area (and no higher-z area covers it)  

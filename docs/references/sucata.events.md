@@ -6,7 +6,7 @@ The events module of the Sucata.
 
 ## sucata.events.emit
 
-Emits an event with the given name and optional data.
+Emits an event with the given name and data.
 
 **parameters**
 
@@ -21,6 +21,6 @@ Registers a handler for an event.
 
 **parameters**
 
-- owner `string | Entity` - The entity owner of the handler (can be an entity table or entity ID)  
+- owner `number | Entity` - The entity owner of the handler (can be an entity table or entity ID)  
 - name `string` - The name of the event  
 - callback `function` - The function to call when the event is emitted  

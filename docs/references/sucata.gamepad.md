@@ -53,6 +53,20 @@ Gets the number of currently connected gamepads.
 
 ---
 
+## sucata.gamepad.get_info
+
+Gets the human-readable name of a gamepad device.
+
+**parameters**
+
+- device `number` - The gamepad device slot  
+
+**return**
+
+- name `string` - The name reported by the gamepad driver for the given device  
+
+---
+
 ## sucata.gamepad.get_axis
 
 Gets the axis value of a gamepad.

@@ -63,7 +63,7 @@ Spawns an entity in the scene.
 
 **return**
 
-- entity_id `string` - The ID of the spawned entity  
+- entity_id `number` - The ID of the spawned entity  
 
 ---
 
@@ -77,7 +77,7 @@ Spawns multiple entities in the scene.
 
 **return**
 
-- entity_ids `string[]` - Array of IDs of the spawned entities  
+- entity_ids `number[]` - Array of IDs of the spawned entities  
 
 ---
 
@@ -87,7 +87,7 @@ Finds an entity by its ID.
 
 **parameters**
 
-- entity_id `string` - The ID of the entity to find  
+- entity_id `number` - The ID of the entity to find  
 
 **return**
 
@@ -101,7 +101,7 @@ Destroys an entity from the scene.
 
 **parameters**
 
-- entity_or_id `Entity | string` - The entity table or entity ID to destroy  
+- entity_or_id `Entity | number` - The entity table or entity ID to destroy  
 
 **return**
 
@@ -119,7 +119,7 @@ Destroys multiple entities from the scene.
 
 **return**
 
-- undestroyed_ids `string[]` - Array of IDs of entities that could not be destroyed  
+- undestroyed_ids `number[]` - Array of IDs of entities that could not be destroyed  
 
 ---
 
@@ -129,7 +129,7 @@ Adds a tag to an entity.
 
 **parameters**
 
-- entity_or_id `Entity | string` - The entity table or entity ID  
+- entity_or_id `Entity | number` - The entity table or entity ID  
 - tag `string` - The tag to add  
 
 **return**
@@ -144,7 +144,7 @@ Checks if an entity has a tag.
 
 **parameters**
 
-- entity_or_id `Entity | string` - The entity table or entity ID  
+- entity_or_id `Entity | number` - The entity table or entity ID  
 - tag `string` - The tag to check  
 
 **return**
@@ -159,7 +159,7 @@ Removes a tag from an entity.
 
 **parameters**
 
-- entity_id `string` - The ID of the entity  
+- entity_or_id `Entity | number` - The entity table or entity ID  
 - tag `string` - The tag to remove  
 
 **return**
@@ -174,7 +174,7 @@ Gets all entity IDs in the scene.
 
 **return**
 
-- entity_ids `string[]` - Array of all entity IDs in the scene  
+- entity_ids `number[]` - Array of all entity IDs in the scene  
 
 ---
 
@@ -188,7 +188,7 @@ Gets all entity IDs with a specific tag.
 
 **return**
 
-- entity_ids `string[]` - Array of entity IDs with the given tag  
+- entity_ids `number[]` - Array of entity IDs with the given tag  
 
 ---
 
