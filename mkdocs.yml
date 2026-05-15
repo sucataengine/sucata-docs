@@ -29,8 +29,8 @@ plugins:
   - search
   - blog
 
-repo_url: https://codeberg.org/sucata/sucata
-repo_name: sucata/sucata
+repo_url: https://github.com/sucataengine
+repo_name: sucata-engine
 
 nav:
   - Home: index.md
