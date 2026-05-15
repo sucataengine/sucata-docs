@@ -21,6 +21,10 @@
          <lastmod>2026-05-15</lastmod>
     </url>
     <url>
+         <loc>https://sucata.dev/blog/</loc>
+         <lastmod>2026-05-15</lastmod>
+    </url>
+    <url>
          <loc>https://sucata.dev/getting-started/concepts/</loc>
          <lastmod>2026-05-15</lastmod>
     </url>
@@ -106,10 +110,6 @@
     </url>
     <url>
          <loc>https://sucata.dev/references/sucata.window/</loc>
-         <lastmod>2026-05-15</lastmod>
-    </url>
-    <url>
-         <loc>https://sucata.dev/blog/</loc>
          <lastmod>2026-05-15</lastmod>
     </url>
 </urlset>
