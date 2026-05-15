@@ -15,7 +15,7 @@
 </div>
 <div style="display:flex; justify-content: center; align-items: center; gap: 16px">
     <a href="/examples/"> Examples </a>
-    <a target="_blank" href="https://github.com/sucataengine/sucata"> Repository </a>
+    <a target="_blank" href="https://github.com/sucata-engine/sucata-engine"> Repository </a>
 </div>
 
 ### Overview

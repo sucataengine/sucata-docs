@@ -4,7 +4,7 @@ In this section we will add **textures** to our game.
 We will add textures for the **player**, **meteors**, and **bullets**.
 
 You can download the assets used in this tutorial from  
-[here](https://github.com/sucataengine/meteors-sucata/src/branch/main/sprites).
+[here](https://github.com/sucata-engine/meteors-sucata/src/branch/main/sprites).
 
 ---
 

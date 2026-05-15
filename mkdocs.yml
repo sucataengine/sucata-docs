@@ -29,7 +29,7 @@ plugins:
   - search
   - blog
 
-repo_url: https://github.com/sucataengine
+repo_url: https://github.com/sucata-engine/sucata-engine
 repo_name: sucata-engine
 
 nav:
